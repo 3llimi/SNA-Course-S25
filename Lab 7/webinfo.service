@@ -1,0 +1,13 @@
+[Unit]
+Description=Simple Web Server for System Information
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/webinfo.sh
+Restart=always
+RestartSec=5
+CPUQuota=15%
+MemoryMax=256M
+
+[Install]
+WantedBy=multi-user.target
